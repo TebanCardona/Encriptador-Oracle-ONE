@@ -6,6 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EncripText</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,600,1,200" />
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -15,31 +22,42 @@
         <h1>EncripText</h1>
       </div>
     </div>
+
+
+
   </header>
   <main>
-    <section>
-      <textarea name="texthere" id="text" cols="30" rows="10" placeholder="Type here"></textarea>
-      <div>
-        <p class="informacion"><small>Lowercase letters only and without accent
-          </small>
+    <section class="encrypt">
+      <textarea class="text-firts" name="texthere" id="text" cols="30" rows="10" placeholder="Type here"></textarea>
+      <div class="info">
+        <span class="material-symbols-outlined">
+          info
+        </span>
+        <p>
+          <small>Lowercase letters only and without accent</small>
         <p>
       </div>
       <div class="btn">
-        <button class="btn-encriptar" onclick="btnEncrypt()">Encriptar</button>
-        <button class="btn-desencriptar" onclick="btnDecrypt()">Desencriptar</button>
+        <button class="btn-encrypt" onclick="btnEncrypt()">Encrypt</button>
+        <button class="btn-decrypt" onclick="btnDecrypt()">Decrypt</button>
       </div>
     </section>
-    <section>
-      <textarea id="text-second" class="secundario" cols="35" disabled></textarea>
-      <div>
-        <button class="btn-copiar" onclick="btnCopy()">Copiar</button>
+    <section class="decrypt">
+      <div class="text-info"><span><b>No message was found </b><br> Enter the text you want to encrypt or
+          decrypt.</span>
+      </div>
+      <textarea class="text-second" id="text-second" cols="35" disabled></textarea>
+      <div class="btn-in-text">
+        <button class="btn-copy" onclick="btnCopy()">Copy</button>
       </div>
     </section>
   </main>
+  <footer>
+    <p>Developed by Esteban Cardona
+    </p><a href="https://www.linkedin.com/in/estebancardonasarria/" target="_blank" rel="noopener noreferrer"><img
+        width="25px" src="img/lik.svg" alt="linkedin"></a>
+  </footer>
 </body>
-<footer>
-  <p>No SE pa</p>
-</footer>
 <script src="index.js"></script>
 </body>
 

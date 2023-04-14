@@ -2,6 +2,8 @@ const text = document.getElementById("text") as HTMLTextAreaElement;
 const textSecond = document.getElementById(
   "text-second"
 ) as HTMLTextAreaElement;
+const btn = document.querySelector(".btn-in-text") as HTMLButtonElement;
+const textInfo = document.querySelector(".text-info") as HTMLDivElement;
 const matrizCode: [string, string][] = [
   ["e", "enter"],
   ["i", "imes"],
@@ -9,6 +11,7 @@ const matrizCode: [string, string][] = [
   ["o", "ober"],
   ["u", "ufat"],
 ];
+btn.style.display = "none";
 function encrypt(strEncrypt: string): string {
   //Convert strEncrypt to lowercases to easy comparison
   strEncrypt = strEncrypt.toLowerCase();
@@ -29,17 +32,33 @@ function decrypt(strDecrypt: string): string {
   return strDecrypt;
 }
 function btnEncrypt(): void {
+  if (text.value.length === 0) {
+    return;
+  }
   const textEncrypt = encrypt(text.value);
+  textSecond.style.backgroundImage = "none";
   textSecond.value = textEncrypt;
   text.value = "";
+  btn.style.display = "block";
+  textInfo.style.display = "none";
 }
 function btnDecrypt(): void {
+  if (text.value.length === 0) {
+    return;
+  }
   const textDeCrypt = decrypt(text.value);
+  textSecond.style.backgroundImage = "none";
   textSecond.value = textDeCrypt;
   text.value = "";
+  btn.style.display = "block";
+  textInfo.style.display = "none";
 }
 
 function btnCopy(): void {
   const textCopy = textSecond.value;
   navigator.clipboard.writeText(textCopy);
+  textSecond.value = "";
+  btn.style.display = "none";
+  textInfo.style.display = "block";
+  textSecond.style.backgroundImage = "url(img/pff.svg)";
 }
