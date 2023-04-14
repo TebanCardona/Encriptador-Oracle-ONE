@@ -1,0 +1,22 @@
+{
+  "name": "encriptador-oracle-one",
+  "version": "1.0.0",
+  "description": "Challenge ONE Sprint 01: Construye un encriptador de texto con Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TebanCardona/Encriptador-Oracle-ONE.git"
+  },
+  "author": "Esteban Cardona",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TebanCardona/Encriptador-Oracle-ONE/issues"
+  },
+  "homepage": "https://github.com/TebanCardona/Encriptador-Oracle-ONE#readme",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}
