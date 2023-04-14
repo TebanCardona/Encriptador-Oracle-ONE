@@ -60,5 +60,5 @@ function btnCopy(): void {
   textSecond.value = "";
   btn.style.display = "none";
   textInfo.style.display = "block";
-  textSecond.style.backgroundImage = "url(img/pff.svg)";
+  textSecond.style.backgroundImage = "url(assets/pff.svg)";
 }
