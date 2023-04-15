@@ -4,6 +4,8 @@ const textSecond = document.getElementById(
 ) as HTMLTextAreaElement;
 const btn = document.querySelector(".btn-in-text") as HTMLButtonElement;
 const textInfo = document.querySelector(".text-info") as HTMLDivElement;
+const btn_copy = document.querySelector(".btn-copy") as HTMLButtonElement;
+
 const matrizCode: [string, string][] = [
   ["e", "enter"],
   ["i", "imes"],
@@ -60,5 +62,7 @@ function btnCopy(): void {
   textSecond.value = "";
   btn.style.display = "none";
   textInfo.style.display = "block";
-  textSecond.style.backgroundImage = "url(assets/pff.svg)";
+  if (window.screen.width >= 1080) {
+    textSecond.style.backgroundImage = "url(assets/pff.svg)";
+  }
 }

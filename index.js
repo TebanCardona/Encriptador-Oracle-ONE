@@ -3,6 +3,7 @@ const text = document.getElementById("text");
 const textSecond = document.getElementById("text-second");
 const btn = document.querySelector(".btn-in-text");
 const textInfo = document.querySelector(".text-info");
+const btn_copy = document.querySelector(".btn-copy");
 const matrizCode = [
     ["e", "enter"],
     ["i", "imes"],
@@ -57,5 +58,7 @@ function btnCopy() {
     textSecond.value = "";
     btn.style.display = "none";
     textInfo.style.display = "block";
-    textSecond.style.backgroundImage = "url(assets/pff.svg)";
+    if (window.screen.width >= 1080) {
+        textSecond.style.backgroundImage = "url(assets/pff.svg)";
+    }
 }
