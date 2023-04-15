@@ -58,7 +58,21 @@ function btnDecrypt(): void {
 
 function btnCopy(): void {
   const textCopy = textSecond.value;
-  navigator.clipboard.writeText(textCopy);
+
+  // Verificar si la API de Clipboard está disponible
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(textCopy).catch((error) => {
+      console.error(`Error al copiar el texto: ${error}`);
+    });
+  } else {
+    // Enfoque alternativo para dispositivos que no admiten la API de Clipboard
+    const input = document.createElement("input");
+    input.value = textCopy;
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand("copy");
+    document.body.removeChild(input);
+  }
   textSecond.value = "";
   btn.style.display = "none";
   textInfo.style.display = "block";
