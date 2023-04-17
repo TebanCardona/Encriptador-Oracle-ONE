@@ -7,12 +7,12 @@ El encriptador utiliza una matriz de códigos para reemplazar cada letra del tex
 # 💻 Cómo usar
 Para utilizar el encriptador, simplemente abre el archivo index.html en un navegador web y sigue los siguientes pasos:
 
-- Ingresa el texto que deseas encriptar o desencriptar en el campo de texto.
-- Presiona el botón "🔒 Encriptar" o "🔓 Desencriptar", según sea el caso.
-- Si deseas copiar el texto resultante, presiona el botón "📋 Copiar".
+1. Ingresa el texto que deseas encriptar o desencriptar en el campo de texto.
+2. Presiona el botón "🔒 Encriptar" o "🔓 Desencriptar", según sea el caso.
+3. Si deseas copiar el texto resultante, presiona el botón "📋 Copiar".
 # 🛠️ Tecnologías utilizadas
-1. TypeScript
-2. HTML
-3. CSS
+- TypeScript
+- HTML
+- CSS
 # 👏 Créditos
 Este proyecto fue desarrollado por Esteban Cardona como parte del Challenge ONE Sprint 01 de Oracle.
