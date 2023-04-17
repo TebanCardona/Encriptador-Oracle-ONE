@@ -15,4 +15,4 @@ Para utilizar el encriptador, simplemente abre el archivo index.html en un naveg
 - HTML
 - CSS
 # 👏 Créditos
-Este proyecto fue desarrollado por Esteban Cardona como parte del Challenge ONE Sprint 01 de Oracle.
+Este proyecto fue desarrollado por *Esteban Cardona* como parte del Challenge ONE Sprint 01 de Oracle.
