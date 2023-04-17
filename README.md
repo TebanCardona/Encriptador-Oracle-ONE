@@ -13,6 +13,6 @@ Si deseas copiar el texto resultante, presiona el botón "📋 Copiar".
 # 🛠️ Tecnologías utilizadas
 1. TypeScript
 2. HTML
-3.CSS
+3. CSS
 # 👏 Créditos
 Este proyecto fue desarrollado por Esteban Cardona como parte del Challenge ONE Sprint 01 de Oracle.
