@@ -7,31 +7,37 @@ const textInfo = document.querySelector(".text-info") as HTMLDivElement;
 const btn_copy = document.querySelector(".btn-copy") as HTMLButtonElement;
 
 const matrizCode: [string, string][] = [
-  ["e", "enter"],
-  ["i", "imes"],
-  ["a", "ai"],
-  ["o", "ober"],
-  ["u", "ufat"],
+  ["e", "!%12@/"],
+  ["i", "{/.`76%#"],
+  ["a", "+^&&#"],
+  ["o", "?6$("],
+  ["u", ":~9*-0"],
 ];
 btn.style.display = "none";
-function encrypt(strEncrypt: string): string {
+function encrypt(strEncrypt: unknown): string {
+  if (typeof strEncrypt !== "string") {
+    throw new Error("Input must be a string");
+  }
   //Convert strEncrypt to lowercases to easy comparison
-  strEncrypt = strEncrypt.toLowerCase();
+  let strEncryptStr = strEncrypt.toLowerCase();
   //Iterate over the code matrix to replace the characters
   matrizCode.forEach(([charOriginal, charEncrypt]) => {
-    strEncrypt = strEncrypt.replaceAll(charOriginal, charEncrypt);
+    strEncryptStr = strEncryptStr.replace(charOriginal, charEncrypt);
   });
-  return strEncrypt;
+  return strEncryptStr;
 }
 
-function decrypt(strDecrypt: string): string {
-  //Convert strdecrypt to lowercases to easy comparison
-  strDecrypt = strDecrypt.toLowerCase();
+function decrypt(strDecrypt: unknown): string {
+  if (typeof strDecrypt !== "string") {
+    throw new Error("Input must be a string");
+  }
+  //Convert strDecrypt to lowercases to easy comparison
+  let strDecryptStr = strDecrypt.toLowerCase();
   //Iterate over the code matrix to replace the characters
-  matrizCode.forEach(([charOriginal, charEncrypt]) => {
-    strDecrypt = strDecrypt.replaceAll(charEncrypt, charOriginal);
+  matrizCode.forEach(([charOriginal, charDecrypt]) => {
+    strDecryptStr = strDecryptStr.replaceAll(charDecrypt, charOriginal);
   });
-  return strDecrypt;
+  return strDecryptStr;
 }
 function btnEncrypt(): void {
   if (text.value.length === 0) {
@@ -39,7 +45,7 @@ function btnEncrypt(): void {
   }
   const textEncrypt = encrypt(text.value);
   textSecond.style.backgroundImage = "none";
-  textSecond.value = textEncrypt;
+  textSecond.value = `${textEncrypt}`;
   text.value = "";
   btn.style.display = "block";
   textInfo.style.display = "none";
@@ -50,7 +56,7 @@ function btnDecrypt(): void {
   }
   const textDeCrypt = decrypt(text.value);
   textSecond.style.backgroundImage = "none";
-  textSecond.value = textDeCrypt;
+  textSecond.value = `${textDeCrypt}`;
   text.value = "";
   btn.style.display = "block";
   textInfo.style.display = "none";
